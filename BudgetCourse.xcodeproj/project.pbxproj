@@ -14,6 +14,7 @@
 		300267252ADA953B008FF1AF /* OngoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300267242ADA953B008FF1AF /* OngoingViewController.swift */; };
 		300267282ADA9607008FF1AF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 300267272ADA9607008FF1AF /* SnapKit */; };
 		3002672A2ADA9607008FF1AF /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 300267292ADA9607008FF1AF /* SnapKit-Dynamic */; };
+		3002672C2ADA9663008FF1AF /* TextOngoingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002672B2ADA9663008FF1AF /* TextOngoingView.swift */; };
 		3002672E2ADA9BD1008FF1AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002672D2ADA9BD1008FF1AF /* Extensions.swift */; };
 		300267362ADBA430008FF1AF /* GTWalsheimPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 300267332ADBA430008FF1AF /* GTWalsheimPro-Regular.ttf */; };
 		300267372ADBA430008FF1AF /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 300267342ADBA430008FF1AF /* GTWalsheimPro-Bold.ttf */; };
@@ -28,6 +29,7 @@
 		3002671C2ADA94DC008FF1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3002671E2ADA94DC008FF1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		300267242ADA953B008FF1AF /* OngoingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OngoingViewController.swift; sourceTree = "<group>"; };
+		3002672B2ADA9663008FF1AF /* TextOngoingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOngoingView.swift; sourceTree = "<group>"; };
 		3002672D2ADA9BD1008FF1AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		300267332ADBA430008FF1AF /* GTWalsheimPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Regular.ttf"; sourceTree = "<group>"; };
 		300267342ADBA430008FF1AF /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				300267102ADA94DB008FF1AF /* AppDelegate.swift */,
 				300267122ADA94DB008FF1AF /* SceneDelegate.swift */,
 				300267242ADA953B008FF1AF /* OngoingViewController.swift */,
+				3002672B2ADA9663008FF1AF /* TextOngoingView.swift */,
 				300267192ADA94DC008FF1AF /* Assets.xcassets */,
 				3002672D2ADA9BD1008FF1AF /* Extensions.swift */,
 				3002671B2ADA94DC008FF1AF /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 			files = (
 				3002672E2ADA9BD1008FF1AF /* Extensions.swift in Sources */,
 				300267112ADA94DB008FF1AF /* AppDelegate.swift in Sources */,
+				3002672C2ADA9663008FF1AF /* TextOngoingView.swift in Sources */,
 				300267252ADA953B008FF1AF /* OngoingViewController.swift in Sources */,
 				300267132ADA94DB008FF1AF /* SceneDelegate.swift in Sources */,
 			);
