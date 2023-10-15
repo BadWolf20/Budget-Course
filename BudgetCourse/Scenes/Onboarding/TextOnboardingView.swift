@@ -77,11 +77,12 @@ class TextOnboardingView: UIView {
 
     private func setupComponents() {
         // View
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         layer.cornerRadius = 20
         // Настройка тени
         // Цвет тени
-        layer.shadowColor = UIColor.black.withAlphaComponent(0.07).cgColor
+        layer.shadowColor = UIColor.systemGray.withAlphaComponent(0.2).cgColor
+
         // Прозрачность тени
         layer.shadowOpacity = 1
         // Смещение тени относительно view
