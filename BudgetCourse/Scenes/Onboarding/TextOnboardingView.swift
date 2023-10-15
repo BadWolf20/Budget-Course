@@ -38,7 +38,7 @@ class TextOnboardingView: UIView {
         let btn = UIButton(type: .system)
 
         btn.titleLabel?.font = UIFont(name: "GTWalsheimPro-Medium", size: 15)
-        btn.setTitleColor(safeResource(UIColor(named: "White")), for: .normal)
+        btn.setTitleColor(safeResource(UIColor(named: "WhiteMain")), for: .normal)
         btn.backgroundColor = safeResource(UIColor(named: "MainPink"))
 
         btn.clipsToBounds = true
