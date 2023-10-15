@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        let viewController = OngoingViewController()
+        let viewController = OnboardingViewController()
 
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController

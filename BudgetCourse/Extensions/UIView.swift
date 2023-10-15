@@ -15,7 +15,8 @@ extension UIViewController {
                 return image
             } else {
                 print("Ошибка: не удалось загрузить изображение. Возвращение дефолтного изображения.")
-                return UIImage(named: "DefaultImage") as! T
+                return UIImage(systemName: "nosign") as! T
+
             }
 
         case is UIColor.Type:
@@ -23,7 +24,7 @@ extension UIViewController {
                 return color
             } else {
                 print("Ошибка: не удалось загрузить цвет. Возвращение дефолтного цвета.")
-                return UIColor(named: "DefaultColor") as! T
+                return UIColor(red: 255, green: 0, blue: 0, alpha: 1) as! T
             }
 
         default:
@@ -40,7 +41,7 @@ extension UIView {
                 return image
             } else {
                 print("Ошибка: не удалось загрузить изображение. Возвращение дефолтного изображения.")
-                return UIImage(named: "DefaultImage") as! T
+                return UIImage(systemName: "nosign") as! T
             }
 
         case is UIColor.Type:
@@ -48,7 +49,7 @@ extension UIView {
                 return color
             } else {
                 print("Ошибка: не удалось загрузить цвет. Возвращение дефолтного цвета.")
-                return UIColor(named: "DefaultColor") as! T
+                return UIColor(red: 255, green: 0, blue: 0, alpha: 1) as! T
             }
 
         default:
