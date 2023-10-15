@@ -8,40 +8,48 @@
 import UIKit
 import SnapKit
 
-class TextOngoingView: UIView {
-//    ["GTWalsheimPro-Regular", "GTWalsheimPro-Medium", "GTWalsheimPro-Bold"]
+class TextOnboardingView: UIView {
+
+    // MARK: - Components
     private lazy var firstLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "GTWalsheimPro-Bold", size: 24)
+
         label.textAlignment = .center
+        label.font = UIFont(name: "GTWalsheimPro-Bold", size: 24)
+        label.textColor = safeResource(UIColor(named: "TextMain"))
+
         return label
     }()
 
     private lazy var secondLabel: UILabel = {
         let label = UILabel()
+
         label.textAlignment = .center
-        label.numberOfLines = 0
         label.font = UIFont(name: "GTWalsheimPro-Regular", size: 14)
+        label.textColor = safeResource(UIColor(named: "TextSecondary"))
 
-        label.textColor = .systemGray
-
+        label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
+
         return label
     }()
 
     private lazy var button: UIButton = {
         let btn = UIButton(type: .system)
-        btn.backgroundColor = safeResource(UIColor(named: "MainPink"))
-        btn.setTitleColor(.white, for: .normal)
-        btn.titleLabel?.font = UIFont(name: "GTWalsheimPro-Medium", size: 15)
 
-        btn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        btn.titleLabel?.font = UIFont(name: "GTWalsheimPro-Medium", size: 15)
+        btn.setTitleColor(safeResource(UIColor(named: "White")), for: .normal)
+        btn.backgroundColor = safeResource(UIColor(named: "MainPink"))
+
         btn.clipsToBounds = true
         btn.layer.cornerRadius = 10
+
+        btn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 
         return btn
     }()
 
+    // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -55,9 +63,6 @@ class TextOngoingView: UIView {
 
     // MARK: - Setup
     private func setupUI() {
-        backgroundColor = .white
-        layer.cornerRadius = 20
-
         setupHierarchy()
         setupConstraints()
         setupComponents()
@@ -71,6 +76,9 @@ class TextOngoingView: UIView {
     }
 
     private func setupComponents() {
+        // View
+        backgroundColor = .white
+        layer.cornerRadius = 20
         // Настройка тени
         // Цвет тени
         layer.shadowColor = UIColor.black.withAlphaComponent(0.07).cgColor
@@ -84,8 +92,6 @@ class TextOngoingView: UIView {
         // Растрирование для лучшей производительности.
         layer.shouldRasterize = true
         layer.rasterizationScale = UIScreen.main.scale
-
-
     }
 
     private func setupText() {
@@ -97,23 +103,24 @@ class TextOngoingView: UIView {
 
     private func setupConstraints() {
         firstLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(35)
-            make.height.equalTo(28)
-
             make.centerX.equalToSuperview()
+
+            make.height.equalTo(28)
+            make.top.equalToSuperview().inset(35)
         }
 
         secondLabel.snp.makeConstraints { make in
-            make.top.equalTo(firstLabel.snp.bottom).offset(18)
-            make.height.equalTo(46)
-
             make.left.right.equalToSuperview().inset(29)
+
+            make.height.equalTo(46)
+            make.top.equalTo(firstLabel.snp.bottom).offset(18)
         }
 
         button.snp.makeConstraints { make in
-            make.top.equalTo(secondLabel.snp.bottom).offset(50)
             make.left.right.equalToSuperview().inset(45)
+
             make.height.equalTo(48)
+            make.top.equalTo(secondLabel.snp.bottom).offset(50)
             make.bottom.equalToSuperview().inset(50)
         }
     }

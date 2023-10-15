@@ -2,7 +2,7 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "ios",
+        "platform" : "universal",
         "reference" : "labelColor"
       },
       "idiom" : "universal"
@@ -15,13 +15,8 @@
         }
       ],
       "color" : {
-        "color-space" : "srgb",
-        "components" : {
-          "alpha" : "1.000",
-          "blue" : "255",
-          "green" : "255",
-          "red" : "255"
-        }
+        "platform" : "universal",
+        "reference" : "labelColor"
       },
       "idiom" : "universal"
     }
