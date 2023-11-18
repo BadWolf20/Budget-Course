@@ -105,7 +105,7 @@ class TextOnboardingView: UIView {
     private func setupConstraints() {
         firstLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-
+// Добавить левое иправое ограничения
             make.height.equalTo(28)
             make.top.equalToSuperview().inset(35)
         }
