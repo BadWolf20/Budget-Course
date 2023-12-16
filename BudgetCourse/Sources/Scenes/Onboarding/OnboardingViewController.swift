@@ -31,23 +31,11 @@ class OnboardingViewController: UIViewController {
         return contr
     }()
 
-    // MARK: - Properties
-
-
-
-    // MARK: - Components
-
-
-
-
-
-
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
-
 
     // MARK: - Setup
     private func setupUI() {
@@ -103,10 +91,6 @@ class OnboardingViewController: UIViewController {
         }
 
     }
-
-    // MARK: - Update
-
-
 
     // MARK: - Actions
     @objc func pageControlTapped(_ sender: UIPageControl) {

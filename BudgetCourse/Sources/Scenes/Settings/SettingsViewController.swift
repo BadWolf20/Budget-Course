@@ -7,14 +7,43 @@
 
 import UIKit
 
+/**
+ `SettingsViewController` - это контроллер представления, отвечающий за отображение и управление настройками в приложении. Экран настроек представлен в виде таблицы, где каждая ячейка является опцией настройки, а также включает в себя пользовательское представление `PinkView` для визуального акцента.
+
+ ### Компоненты:
+ - `pinkView`: `PinkView` для отображения информационного сообщения или баннера.
+ - `tableView`: `UITableView` для отображения списка настроек.
+
+ ### Жизненный цикл:
+ - `viewDidLoad()`: Вызывается после загрузки контроллера представления.
+
+ ### Настройка интерфейса:
+ - `setupUI()`: Конфигурирует иерархию, ограничения и компоненты представления.
+ - `setupHierarchy()`: Добавляет `pinkView` и `tableView` в иерархию представлений.
+ - `setupConstraints()`: Настраивает расположение `pinkView` и `tableView` на экране.
+ - `setupComponents()`: Настраивает дополнительные компоненты, такие как стиль навигационной панели.
+ - `setupText()`: Устанавливает текстовые значения для `pinkView` и заголовка контроллера.
+
+ ### Действия:
+ - `tog(_:)`: Обработка изменений в переключателях настроек.
+ - `moveToSetttingView(_:)`: Навигация к конкретному экрану настроек на основе выбранной опции.
+
+ ### Расширение `UITableViewDataSource` и `UITableViewDelegate`:
+ Реализует методы протоколов для управления данными и взаимодействием с таблицей.
+
+ ### Пример использования:
+ Для использования `SettingsViewController` просто инициализируйте и добавьте его в стек навигации:
+ ```swift
+ let settingsVC = SettingsViewController()
+ navigationController?.pushViewController(settingsVC, animated: true)
+ ```
+*/
 class SettingsViewController: UIViewController {
-    // MARK: - Properties
-    
-
     // MARK: - Components
-
+    /// `pinkView` - представление для отображения карточки включаения уведомлений.
     private lazy var pinkView = PinkView()
 
+    /// `tableView` - таблица для отображения пунктов настроек.
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
 
@@ -22,7 +51,7 @@ class SettingsViewController: UIViewController {
         tableView.register(cellType: SettingTableViewCell.self)
         tableView.backgroundColor = .clear
         tableView.frame = CGRect.init(origin: .zero, size: view.frame.size)
-        tableView.rowHeight = 80
+        tableView.rowHeight = Metric.tableviewRowHeight
         tableView.separatorStyle = .singleLine
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 92, bottom: 0, right: 26)
 
@@ -37,7 +66,6 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-
 
     // MARK: - Setup
     private func setupUI() {
@@ -55,9 +83,6 @@ class SettingsViewController: UIViewController {
     private func setupComponents() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemBackground
-
-
-
     }
 
     private func setupText() {
@@ -80,13 +105,12 @@ class SettingsViewController: UIViewController {
     }
 
     // MARK: - Actions
-    // Обработка переключения свитча
+    /// Обработка переключения свитча
     @objc private func tog(_ toggle: UISwitch) {
     }
 
-
     // MARK: - Functions
-    // Переход к экрану настроек на основе выбранной строки
+    /// Переход к экрану настроек на основе выбранной строки
     private func moveToSetttingView(_ pageName: String) {
         switch pageName {
         case "":
@@ -135,4 +159,12 @@ extension SettingsViewController: UITableViewDelegate {
         // Переход к экрану настроек
         moveToSetttingView(settingsData[indexPath.row].title)
     }
+}
+
+extension SettingsViewController {
+    /// Предоставляет метрики и константы, используемые в макете и дизайне UI `SettingsViewController`.
+    enum Metric {
+        static let tableviewRowHeight: CGFloat = 80
+    }
+
 }
