@@ -19,6 +19,13 @@
 		300267362ADBA430008FF1AF /* GTWalsheimPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 300267332ADBA430008FF1AF /* GTWalsheimPro-Regular.ttf */; };
 		300267372ADBA430008FF1AF /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 300267342ADBA430008FF1AF /* GTWalsheimPro-Bold.ttf */; };
 		300267382ADBA430008FF1AF /* GTWalsheimPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 300267352ADBA430008FF1AF /* GTWalsheimPro-Medium.ttf */; };
+		304E84FD2B08C105004F7023 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E84FC2B08C105004F7023 /* TableView.swift */; };
+		304E85002B08C174004F7023 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E84FF2B08C174004F7023 /* SettingsViewController.swift */; };
+		304E85022B08C219004F7023 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E85012B08C219004F7023 /* SettingsModel.swift */; };
+		304E85042B08C3B0004F7023 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E85032B08C3B0004F7023 /* SettingTableViewCell.swift */; };
+		304E85062B08C78D004F7023 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E85052B08C78D004F7023 /* UIImage.swift */; };
+		304E85082B08CD3D004F7023 /* SafeResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E85072B08CD3D004F7023 /* SafeResources.swift */; };
+		304E850A2B08D3D1004F7023 /* PinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E85092B08D3D1004F7023 /* PinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		300267332ADBA430008FF1AF /* GTWalsheimPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Regular.ttf"; sourceTree = "<group>"; };
 		300267342ADBA430008FF1AF /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
 		300267352ADBA430008FF1AF /* GTWalsheimPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Medium.ttf"; sourceTree = "<group>"; };
+		304E84FC2B08C105004F7023 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		304E84FF2B08C174004F7023 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		304E85012B08C219004F7023 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		304E85032B08C3B0004F7023 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		304E85052B08C78D004F7023 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		304E85072B08CD3D004F7023 /* SafeResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeResources.swift; sourceTree = "<group>"; };
+		304E85092B08D3D1004F7023 /* PinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +82,9 @@
 		3002670F2ADA94DA008FF1AF /* BudgetCourse */ = {
 			isa = PBXGroup;
 			children = (
-				3002673A2ADBD30E008FF1AF /* App */,
-				3002673C2ADBD388008FF1AF /* Scenes */,
+				304E84FA2B08C092004F7023 /* Sources */,
+				304E84FB2B08C0B9004F7023 /* Models */,
 				3002673D2ADBD398008FF1AF /* Resources */,
-				3002673B2ADBD31F008FF1AF /* Extensions */,
 			);
 			path = BudgetCourse;
 			sourceTree = "<group>";
@@ -108,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				3002672D2ADA9BD1008FF1AF /* UIView.swift */,
+				304E84FC2B08C105004F7023 /* TableView.swift */,
+				304E85052B08C78D004F7023 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +130,7 @@
 		3002673C2ADBD388008FF1AF /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				304E84FE2B08C154004F7023 /* Settings */,
 				300267392ADBD282008FF1AF /* Onboarding */,
 			);
 			path = Scenes;
@@ -127,8 +143,37 @@
 				3002671E2ADA94DC008FF1AF /* Info.plist */,
 				3002671B2ADA94DC008FF1AF /* LaunchScreen.storyboard */,
 				300267322ADBA307008FF1AF /* Fonts */,
+				304E85072B08CD3D004F7023 /* SafeResources.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		304E84FA2B08C092004F7023 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3002673B2ADBD31F008FF1AF /* Extensions */,
+				3002673A2ADBD30E008FF1AF /* App */,
+				3002673C2ADBD388008FF1AF /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		304E84FB2B08C0B9004F7023 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				304E85012B08C219004F7023 /* SettingsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		304E84FE2B08C154004F7023 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				304E84FF2B08C174004F7023 /* SettingsViewController.swift */,
+				304E85032B08C3B0004F7023 /* SettingTableViewCell.swift */,
+				304E85092B08D3D1004F7023 /* PinkView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,10 +256,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304E85022B08C219004F7023 /* SettingsModel.swift in Sources */,
+				304E85062B08C78D004F7023 /* UIImage.swift in Sources */,
 				3002672E2ADA9BD1008FF1AF /* UIView.swift in Sources */,
+				304E84FD2B08C105004F7023 /* TableView.swift in Sources */,
+				304E85042B08C3B0004F7023 /* SettingTableViewCell.swift in Sources */,
+				304E85002B08C174004F7023 /* SettingsViewController.swift in Sources */,
+				304E850A2B08D3D1004F7023 /* PinkView.swift in Sources */,
 				300267112ADA94DB008FF1AF /* AppDelegate.swift in Sources */,
 				3002672C2ADA9663008FF1AF /* TextOnboardingView.swift in Sources */,
 				300267252ADA953B008FF1AF /* OnboardingViewController.swift in Sources */,
+				304E85082B08CD3D004F7023 /* SafeResources.swift in Sources */,
 				300267132ADA94DB008FF1AF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
